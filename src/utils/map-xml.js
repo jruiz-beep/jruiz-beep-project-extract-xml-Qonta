@@ -45,18 +45,39 @@ const mapXmlToJSON = (xml) => {
     }
   }
   
+  // Extraer TaxLevelCode de forma robusta: puede ser string, objeto con $t,
+  // un array de nodos, o un objeto más complejo. Normalizamos a un string
+  // tipo "O-13;O-15;O-23" en `taxLevelRaw`.
+  const taxLevelNode = json["Invoice"]?.['cac:AccountingSupplierParty']?.['cac:Party']?.['cac:PartyTaxScheme']?.['cbc:TaxLevelCode'];
+  const taxLevelRaw = (() => {
+    if (taxLevelNode == null) return null;
+    if (Array.isArray(taxLevelNode)) {
+      return taxLevelNode
+        .map(n => (n && (n.$t || String(n))))
+        .filter(Boolean)
+        .join(';') || null;
+    }
+    if (typeof taxLevelNode === 'object') {
+      // prefer $t when present, else try to join primitive values, else stringify
+      if (taxLevelNode.$t) return taxLevelNode.$t;
+      const vals = Object.values(taxLevelNode).map(v => (v && v.$t) || String(v)).filter(Boolean);
+      return vals.length ? vals.join(';') : JSON.stringify(taxLevelNode);
+    }
+    return String(taxLevelNode);
+  })();
+
   const Proveedor = {
     CodigoPostal: String(json["Invoice"]["cac:AccountingSupplierParty"]["cac:Party"]["cac:PartyTaxScheme"]?.["cac:RegistrationAddress"]?.["cbc:PostalZone"]) || null,
-    Municipio: String(json["Invoice"]['cac:AccountingSupplierParty']['cac:Party']['cac:PartyTaxScheme']['cac:RegistrationAddress']['cbc:ID']) || null, //*campo nuevo
+    Municipio: String(json["Invoice"]["cac:AccountingSupplierParty"]["cac:Party"]["cac:PartyTaxScheme"]?.["cac:RegistrationAddress"]?.["cbc:ID"]) || null, //*campo nuevo
     // original raw value (may be like "O-13;O-15;O-23" or "R-99-PN")
-    ResponsabilidadesFiscales: String(json["Invoice"]['cac:AccountingSupplierParty']['cac:Party']['cac:PartyTaxScheme']['cbc:TaxLevelCode']) || null, //*campo nuevo
+    ResponsabilidadesFiscales: taxLevelRaw || null, //*campo nuevo
     // normalized numeric codes extracted from the TaxLevelCode when possible
     // example: "O-13;O-15;O-23" -> ["13","15","23"]
     ResponsabilidadesFiscalesCodigo: (() => {
       try {
-        const raw = String(json["Invoice"]['cac:AccountingSupplierParty']['cac:Party']['cac:PartyTaxScheme']['cbc:TaxLevelCode'] || "");
+        const raw = taxLevelRaw || "";
         if (!raw) return null;
-        const parts = raw.split(';').map(p => p.trim()).filter(Boolean);
+        const parts = String(raw).split(';').map(p => p.trim()).filter(Boolean);
         const codes = [];
         for (const p of parts) {
           const m = p.match(/^O-(\d+)$/i);
