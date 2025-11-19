@@ -1,0 +1,24 @@
+{
+  "name": "extract-xml-data",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "build": "pkg ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prisma": "^6.2.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "axios": "^1.7.9",
+    "chalk": "^4.1.2",
+    "uuid": "^11.0.4",
+    "xml2json": "^0.12.0"
+  }
+}
