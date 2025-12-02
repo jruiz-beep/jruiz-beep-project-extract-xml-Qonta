@@ -56,21 +56,21 @@ const createInvoices = async (invoices) => {
         Auxiliar: invoice.Auxiliar || "{}",
         Notas: invoice.Notas,
       });
-
+      
       for (const allowanceCharge of invoice.AllowanceCharge || []) {
         const allowanceChargeId = uuid();
         AllowanceChargeGlobal.push({
           Id: allowanceChargeId,
           CufeXMLFK: invoiceId,
-          ChargeIndicator: allowanceCharge.ChargeIndicator || false,
-          AllowanceChargeReasonCode: allowanceCharge.AllowanceChargeReasonCode || "N/A",
+          ChargeIndicator:  Boolean(allowanceCharge.ChargeIndicator) || null,
+          AllowanceChargeReasonCode: allowanceCharge.AllowanceChargeReasonCode || null,
           AllowanceChargeReason: allowanceCharge.AllowanceChargeReason || "N/A",
           MultiplierFactorNumeric: parseFloat(allowanceCharge.MultiplierFactorNumeric) || 0,
           Amount: parseFloat(allowanceCharge.Amount) || 0,
           BaseAmount: parseFloat(allowanceCharge.BaseAmount) || 0,
         });
       }
-
+      
       for (const line of invoice.ItemsCufeXML || []) {
         const lineId = uuid();
 

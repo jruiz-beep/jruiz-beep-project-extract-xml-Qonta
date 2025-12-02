@@ -1422,6 +1422,7 @@ model CufeXMLAllowanceCharges {
   MultiplierFactorNumeric   Decimal?  @db.Decimal(19, 3)
   Amount                    Decimal?  @db.Decimal(19, 3)
   BaseAmount                Decimal?  @db.Decimal(19, 3)
+  ChargeIndicator           Boolean?
   CufesXML                  CufesXML? @relation(fields: [CufeXMLFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CufeXMLAllowanceCharges_CufeXMLFK_CufesXML")
 }
 

@@ -85,30 +85,33 @@ const mapXmlToJSON = (xml) => {
   };
 
   // Mapear AllowanceCharge si existe
-  const allowanceCharge = json["Invoice"]["cac:AllowanceCharge"];
-  if (allowanceCharge) {
-    const isArray = Array.isArray(allowanceCharge);
-    if(isArray){
-      invoice.AllowanceCharge = allowanceCharge.map((ac) => {
-        return {
-          ChargeIndicator: ac?.["cbc:ChargeIndicator"],
-          AllowanceChargeReasonCode: ac?.["cbc:AllowanceChargeReasonCode"],
-          AllowanceChargeReason: ac?.["cbc:AllowanceChargeReason"],
-          MultiplierFactorNumeric: ac?.["cbc:MultiplierFactorNumeric"],
-          Amount: ac?.["cbc:Amount"]?.["$t"] || ac?.["cbc:Amount"],
-          BaseAmount: ac?.["cbc:BaseAmount"]?.["$t"] || ac?.["cbc:BaseAmount"],
-        }
-      })
-    }else{
-      invoice.AllowanceCharge = {
-        ChargeIndicator: allowanceCharge?.["cbc:ChargeIndicator"],
-        AllowanceChargeReasonCode: allowanceCharge?.["cbc:AllowanceChargeReasonCode"],
-        AllowanceChargeReason: allowanceCharge?.["cbc:AllowanceChargeReason"],
-        MultiplierFactorNumeric: allowanceCharge?.["cbc:MultiplierFactorNumeric"],
-        Amount: allowanceCharge?.["cbc:Amount"]?.["$t"] || allowanceCharge?.["cbc:Amount"],
-        BaseAmount: allowanceCharge?.["cbc:BaseAmount"]?.["$t"] || allowanceCharge?.["cbc:BaseAmount"],
+  const rawAllowanceCharge = json["Invoice"]["cac:AllowanceCharge"];
+
+  if (rawAllowanceCharge) {
+    // 1. Normalización: Si es array lo usamos, si es objeto lo envolvemos en [ ]
+    const allowanceChargeArray = Array.isArray(rawAllowanceCharge) ? rawAllowanceCharge : [rawAllowanceCharge];
+
+    // 2. Mapeo único (funciona para 1 o para N)
+    invoice.AllowanceCharge = allowanceChargeArray.map((ac) => {
+
+      // Validación para AllowanceChargeReasonCode vacío {}
+      let reasonCode = ac["cbc:AllowanceChargeReasonCode"];
+      if (reasonCode && typeof reasonCode === 'object' && Object.keys(reasonCode).length === 0) {
+        reasonCode = null;
       }
-    }
+
+      return {
+        ChargeIndicator: ac?.["cbc:ChargeIndicator"],
+        AllowanceChargeReasonCode: reasonCode,
+        AllowanceChargeReason: ac?.["cbc:AllowanceChargeReason"],
+        MultiplierFactorNumeric: ac?.["cbc:MultiplierFactorNumeric"],
+        Amount: ac?.["cbc:Amount"]?.["$t"] || ac?.["cbc:Amount"],
+        BaseAmount: ac?.["cbc:BaseAmount"]?.["$t"] || ac?.["cbc:BaseAmount"],
+      };
+    });
+  } else {
+    // Opcional: Si no existe, inicializar como array vacío
+    invoice.AllowanceCharge = [];
   }
 
   const invoiceLines = json?.Invoice?.["cac:InvoiceLine"];
