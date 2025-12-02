@@ -64,6 +64,7 @@ model Clientes {
   Autoretenedor                                                          Boolean?
   PropinaMayorValor                                                      Boolean?
   CuentaPropinaFK                                                        String?                             @db.VarChar(100)
+  CuentaImpMayoValorFK                                                   String?                             @db.VarChar(100)
   CentrosCostos                                                          CentrosCostos[]
   CierresMeses                                                           CierresMeses[]
   ClasificacionesCentrosCostos                                           ClasificacionesCentrosCostos[]
@@ -75,12 +76,14 @@ model Clientes {
   TiposDocumentos_Clientes_TipoDocumentoRepresentanteFKToTiposDocumentos TiposDocumentos?                    @relation("Clientes_TipoDocumentoRepresentanteFKToTiposDocumentos", fields: [TipoDocumentoRepresentanteFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Clientes_TipoDocumentoRepresentanteFK_TiposDocumentos")
   TiposOrganizaciones                                                    TiposOrganizaciones?                @relation(fields: [TipoOrganizacionFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Clientes_TipoOrganizacionFK_TiposOrganizaciones")
   ConceptosRetencionxClientes                                            ConceptosRetencionxClientes[]
+  DescuentosGlobales                                                     DescuentosGlobales[]
   DetallesImpuestos                                                      DetallesImpuestos[]
   DetallesProveedores                                                    DetallesProveedores[]
   FacturasRecibidasDian                                                  FacturasRecibidasDian[]
   ImpuestosICAxClientes                                                  ImpuestosICAxClientes[]
   PlandeCuentas                                                          PlandeCuentas[]
   Proveedores                                                            Proveedores[]
+  RecargosGlobales                                                       RecargosGlobales[]
   ResponsabilidadesFiscalesClientes                                      ResponsabilidadesFiscalesClientes[]
   Terceros                                                               Terceros[]
   Usuarios                                                               Usuarios[]
@@ -117,22 +120,23 @@ model CodigosPostales {
 }
 
 model CufesXML {
-  Id                    String                  @id(map: "PK__CufesXML__3214EC07ACBB9146") @default(dbgenerated("newid()"), map: "DF__CufesXML__Id__2645B050") @db.UniqueIdentifier
-  NumeroFactura         String?                 @db.VarChar(100)
-  Emisor                String?                 @db.VarChar(100)
-  TipoFactura           String?                 @db.VarChar(100)
-  FechaEmision          DateTime?
-  FechaVencimiento      DateTime?
-  CUFE                  String?                 @db.VarChar(1000)
-  FormaPago             String?                 @db.VarChar(10)
-  ValorTotal            Decimal?                @db.Decimal(19, 3)
-  Auxiliar              String?                 @db.VarChar(Max)
-  Notas                 String?                 @db.VarChar(Max)
-  ValorPropina          Decimal?                @db.Decimal(19, 3)
-  Causaciones           Causaciones[]
-  CausacionesOriginales CausacionesOriginales[]
-  FacturasRecibidasDian FacturasRecibidasDian[]
-  ItemsCufeXML          ItemsCufeXML[]
+  Id                      String                    @id(map: "PK__CufesXML__3214EC07ACBB9146") @default(dbgenerated("newid()"), map: "DF__CufesXML__Id__2645B050") @db.UniqueIdentifier
+  NumeroFactura           String?                   @db.VarChar(100)
+  Emisor                  String?                   @db.VarChar(100)
+  TipoFactura             String?                   @db.VarChar(100)
+  FechaEmision            DateTime?
+  FechaVencimiento        DateTime?
+  CUFE                    String?                   @db.VarChar(1000)
+  FormaPago               String?                   @db.VarChar(10)
+  ValorTotal              Decimal?                  @db.Decimal(19, 3)
+  Auxiliar                String?                   @db.VarChar(Max)
+  Notas                   String?                   @db.VarChar(Max)
+  ValorPropina            Decimal?                  @db.Decimal(19, 3)
+  Causaciones             Causaciones[]
+  CausacionesOriginales   CausacionesOriginales[]
+  CufeXMLAllowanceCharges CufeXMLAllowanceCharges[]
+  FacturasRecibidasDian   FacturasRecibidasDian[]
+  ItemsCufeXML            ItemsCufeXML[]
 }
 
 model Departamentos {
@@ -302,19 +306,23 @@ model ItemsCufeXML {
 }
 
 model Municipios {
-  Id                  String            @id(map: "PK__Municipi__3214EC07E96E5602") @default(dbgenerated("newid()"), map: "DF__Municipios__Id__72C60C4A") @db.UniqueIdentifier
-  Nombre              String            @db.VarChar(500)
-  Codigo              String?           @db.VarChar(10)
-  Descripcion         String?           @db.VarChar(Max)
-  UsuarioCreacion     String?           @db.UniqueIdentifier
-  UsuarioModificacion String?           @db.UniqueIdentifier
-  FechaCreacion       DateTime?
-  FechaModificacion   DateTime?
-  DepartamentoFK      String?           @db.UniqueIdentifier
-  CodigosPostales     CodigosPostales[]
-  ImpuestosICA        ImpuestosICA[]
-  Departamentos       Departamentos?    @relation(fields: [DepartamentoFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Municipios_DepartamentoFK_Departamentos")
-  Proveedores         Proveedores[]
+  Id                                             String            @id(map: "PK__Municipi__3214EC07E96E5602") @default(dbgenerated("newid()"), map: "DF__Municipios__Id__72C60C4A") @db.UniqueIdentifier
+  Nombre                                         String            @db.VarChar(500)
+  Codigo                                         String?           @db.VarChar(10)
+  Descripcion                                    String?           @db.VarChar(Max)
+  UsuarioCreacion                                String?           @db.UniqueIdentifier
+  UsuarioModificacion                            String?           @db.UniqueIdentifier
+  FechaCreacion                                  DateTime?
+  FechaModificacion                              DateTime?
+  DepartamentoFK                                 String?           @db.UniqueIdentifier
+  CodigosPostales                                CodigosPostales[]
+  DylHVS_DylHVS_CiudadConductorFKToDylCiudades   DylHVS[]          @relation("DylHVS_CiudadConductorFKToDylCiudades")
+  DylHVS_DylHVS_CiudadPoseedorFKToDylCiudades    DylHVS[]          @relation("DylHVS_CiudadPoseedorFKToDylCiudades")
+  DylHVS_DylHVS_CiudadPropietarioFKToDylCiudades DylHVS[]          @relation("DylHVS_CiudadPropietarioFKToDylCiudades")
+  DylHVS_DylHVS_CiudadReferenciaFKToDylCiudades  DylHVS[]          @relation("DylHVS_CiudadReferenciaFKToDylCiudades")
+  ImpuestosICA                                   ImpuestosICA[]
+  Departamentos                                  Departamentos?    @relation(fields: [DepartamentoFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Municipios_DepartamentoFK_Departamentos")
+  Proveedores                                    Proveedores[]
 }
 
 model Paises {
@@ -726,18 +734,21 @@ model ImportsAuxiliar {
 }
 
 model Impuestos {
-  Id                  String              @id(map: "PK__Impuesto__3214EC076C7E80AC") @default(dbgenerated("newid()"), map: "DF__Impuestos__Id__1B9317B3") @db.UniqueIdentifier
-  Nombre              String?             @db.VarChar(500)
-  Codigo              String?             @db.VarChar(100)
-  Descripcion         String?             @db.VarChar(500)
-  UsuarioCreacion     String?             @db.UniqueIdentifier
-  UsuarioModificacion String?             @db.UniqueIdentifier
-  FechaCreacion       DateTime?
-  FechaModificacion   DateTime?
-  CodigoContable      String?             @db.VarChar(100)
-  Porcentaje          String?             @db.VarChar(100)
-  Causaciones         Causaciones[]
-  DetallesImpuestos   DetallesImpuestos[]
+  Id                    String                  @id(map: "PK__Impuesto__3214EC076C7E80AC") @default(dbgenerated("newid()"), map: "DF__Impuestos__Id__1B9317B3") @db.UniqueIdentifier
+  Nombre                String?                 @db.VarChar(500)
+  Codigo                String?                 @db.VarChar(100)
+  Descripcion           String?                 @db.VarChar(500)
+  UsuarioCreacion       String?                 @db.UniqueIdentifier
+  UsuarioModificacion   String?                 @db.UniqueIdentifier
+  FechaCreacion         DateTime?
+  FechaModificacion     DateTime?
+  CodigoContable        String?                 @db.VarChar(100)
+  Porcentaje            String?                 @db.VarChar(100)
+  General               Boolean?
+  Tipo                  String?                 @db.VarChar(100)
+  Causaciones           Causaciones[]
+  CausacionesOriginales CausacionesOriginales[]
+  DetallesImpuestos     DetallesImpuestos[]
 }
 
 model Modulos {
@@ -782,6 +793,7 @@ model PlandeCuentas {
   ConceptosRetencionxClientes_ConceptosRetencionxClientes_CuentaFKToPlandeCuentas             ConceptosRetencionxClientes[]          @relation("ConceptosRetencionxClientes_CuentaFKToPlandeCuentas")
   ConceptosRetencionxClientes_ConceptosRetencionxClientes_CuentaNoDeclaranteFKToPlandeCuentas ConceptosRetencionxClientes[]          @relation("ConceptosRetencionxClientes_CuentaNoDeclaranteFKToPlandeCuentas")
   ConceptosRetencionxClientes_ConceptosRetencionxClientes_CuentaReteIvaFKToPlandeCuentas      ConceptosRetencionxClientes[]          @relation("ConceptosRetencionxClientes_CuentaReteIvaFKToPlandeCuentas")
+  DescuentosGlobales                                                                          DescuentosGlobales[]
   DetallesClasificacionesCentrosCostos                                                        DetallesClasificacionesCentrosCostos[]
   DetallesImpuestos_DetallesImpuestos_CuentaBienFKToPlandeCuentas                             DetallesImpuestos[]                    @relation("DetallesImpuestos_CuentaBienFKToPlandeCuentas")
   DetallesImpuestos                                                                           DetallesImpuestos[]
@@ -792,6 +804,7 @@ model PlandeCuentas {
   Clientes                                                                                    Clientes?                              @relation(fields: [ClienteFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_PlandeCuentas_ClienteFK_Clientes")
   Proveedores_Proveedores_CuentaFKToPlandeCuentas                                             Proveedores[]                          @relation("Proveedores_CuentaFKToPlandeCuentas")
   Proveedores_Proveedores_CuentaPorPagarFKToPlandeCuentas                                     Proveedores[]                          @relation("Proveedores_CuentaPorPagarFKToPlandeCuentas")
+  RecargosGlobales                                                                            RecargosGlobales[]
 
   @@unique([NumCuenta, ClienteFK], map: "UQ_PlandeCuentas_NumCuenta_ClienteFK")
   @@index([ClienteFK, CuentaOperador], map: "IX_PUC_Cliente_CuentaOperador")
@@ -1104,7 +1117,6 @@ model CausacionesOriginales {
   Observaciones            String?                   @db.VarChar(500)
   Posicion                 Decimal?                  @db.Decimal(19, 3)
   ProveedorFK              String?                   @db.UniqueIdentifier
-  Impuesto                 Boolean?
   UsuarioCreacion          String?                   @db.UniqueIdentifier
   FechaCreacion            DateTime?
   Modificada               Boolean?
@@ -1116,12 +1128,17 @@ model CausacionesOriginales {
   CuentaPorPagar           Boolean?
   Gasto                    Boolean?
   RetencionAsumida         Boolean?
+  ImpMayorValor            Boolean?
+  ImpuestoBit              Boolean?
+  ImpuestoFK               String?                   @db.UniqueIdentifier
+  NoDeducible              Boolean?
   CentrosCostos            CentrosCostos?            @relation(fields: [CentroCostosFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_CentroCostosFK_CentrosCostos")
   ClasificacionesConceptos ClasificacionesConceptos? @relation(fields: [ClasificacionFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_ClasificacionFK_ClasificacionesConceptos")
   ConceptosRetencion       ConceptosRetencion?       @relation(fields: [ConceptoFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_ConceptoFK_ConceptosRetencion")
   PlandeCuentas            PlandeCuentas?            @relation(fields: [CuentaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_CuentaFK_PlandeCuentas")
   CufesXML                 CufesXML?                 @relation(fields: [CufeXMLFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_CufeXMLFK_CufesXML")
   FacturasRecibidasDian    FacturasRecibidasDian?    @relation(fields: [FacturaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_FacturaFK_FacturasRecibidasDian")
+  Impuestos                Impuestos?                @relation(fields: [ImpuestoFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_ImpuestoFK_Impuestos")
   Proveedores              Proveedores?              @relation(fields: [ProveedorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CausacionesOriginales_ProveedorFK_Proveedores")
 }
 
@@ -1253,18 +1270,14 @@ model DylArls {
 }
 
 model DylCiudades {
-  Id                                             String    @id(map: "PK__DylCiuda__3214EC079A137E94") @default(dbgenerated("newid()"), map: "DF__DylCiudades__Id__02284B6B") @db.UniqueIdentifier
-  Nombre                                         String?   @db.VarChar(100)
-  Descripcion                                    String?   @db.VarChar(500)
-  Departamento                                   String?   @db.VarChar(200)
-  UsuarioCreacion                                String?   @db.UniqueIdentifier
-  UsuarioModificacion                            String?   @db.VarChar(100)
-  FechaCreacion                                  DateTime?
-  FechaModificacion                              DateTime?
-  DylHVS_DylHVS_CiudadConductorFKToDylCiudades   DylHVS[]  @relation("DylHVS_CiudadConductorFKToDylCiudades")
-  DylHVS_DylHVS_CiudadPoseedorFKToDylCiudades    DylHVS[]  @relation("DylHVS_CiudadPoseedorFKToDylCiudades")
-  DylHVS_DylHVS_CiudadPropietarioFKToDylCiudades DylHVS[]  @relation("DylHVS_CiudadPropietarioFKToDylCiudades")
-  DylHVS_DylHVS_CiudadReferenciaFKToDylCiudades  DylHVS[]  @relation("DylHVS_CiudadReferenciaFKToDylCiudades")
+  Id                  String    @id(map: "PK__DylCiuda__3214EC079A137E94") @default(dbgenerated("newid()"), map: "DF__DylCiudades__Id__02284B6B") @db.UniqueIdentifier
+  Nombre              String?   @db.VarChar(100)
+  Descripcion         String?   @db.VarChar(500)
+  Departamento        String?   @db.VarChar(200)
+  UsuarioCreacion     String?   @db.UniqueIdentifier
+  UsuarioModificacion String?   @db.VarChar(100)
+  FechaCreacion       DateTime?
+  FechaModificacion   DateTime?
 }
 
 model DylEpss {
@@ -1293,10 +1306,6 @@ model DylHVS {
   TipoDocumentoPropietarioFK                                               String?             @db.UniqueIdentifier
   GPSFK                                                                    String?             @db.UniqueIdentifier
   Placa                                                                    String?             @db.VarChar(100)
-  PesoCarroceria                                                           String?             @db.VarChar(100)
-  AltoCarroceria                                                           String?             @db.VarChar(100)
-  AnchoCarroceria                                                          String?             @db.VarChar(100)
-  LargoCarroceria                                                          String?             @db.VarChar(100)
   PrimerNombreConductor                                                    String?             @db.VarChar(200)
   SegundoNombreConductor                                                   String?             @db.VarChar(200)
   PrimerApellidoConductor                                                  String?             @db.VarChar(200)
@@ -1339,17 +1348,38 @@ model DylHVS {
   UsuarioModificacion                                                      String?             @db.UniqueIdentifier
   FechaCreacion                                                            DateTime?
   FechaModificacion                                                        DateTime?
+  Usuario                                                                  String?             @db.VarChar(100)
+  Contrasena                                                               String?             @db.VarChar(100)
+  CedulaFrontal                                                            String?             @db.VarChar(Max)
+  CedulaTrasera                                                            String?             @db.VarChar(Max)
+  LicenciaFrontal                                                          String?             @db.VarChar(Max)
+  LicenciaTrasera                                                          String?             @db.VarChar(Max)
+  MatriculaFrontal                                                         String?             @db.VarChar(Max)
+  MatriculaTrasera                                                         String?             @db.VarChar(Max)
+  CertificacionBancariaConductor                                           String?             @db.VarChar(Max)
+  CertificacionBancariaPoseedor                                            String?             @db.VarChar(Max)
+  RUTPoseedor                                                              String?             @db.VarChar(Max)
+  FotoFrontalConductorPlaca                                                String?             @db.VarChar(Max)
+  FotoFrontalVehiculo                                                      String?             @db.VarChar(Max)
+  FotoLateralizquierdoVehiculo                                             String?             @db.VarChar(Max)
+  FotoLateralDerechoVehiculo                                               String?             @db.VarChar(Max)
+  FotoTraseraVehiculo                                                      String?             @db.VarChar(Max)
   CiudadConductorFK                                                        String?             @db.UniqueIdentifier
   CiudadPoseedorFK                                                         String?             @db.UniqueIdentifier
   CiudadPropietarioFK                                                      String?             @db.UniqueIdentifier
   CiudadReferenciaFK                                                       String?             @db.UniqueIdentifier
+  Pagina                                                                   String?             @db.VarChar(200)
+  PesoCarroceria                                                           Decimal?            @db.Decimal(19, 3)
+  AltoCarroceria                                                           Decimal?            @db.Decimal(19, 3)
+  AnchoCarroceria                                                          Decimal?            @db.Decimal(19, 3)
+  LargoCarroceria                                                          Decimal?            @db.Decimal(19, 3)
   DylArls_DylHVS_ARLConductorFKToDylArls                                   DylArls?            @relation("DylHVS_ARLConductorFKToDylArls", fields: [ARLConductorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_ARLConductorFK_DylArls")
   DylArls_DylHVS_ARLPoseedorFKToDylArls                                    DylArls?            @relation("DylHVS_ARLPoseedorFKToDylArls", fields: [ARLPoseedorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_ARLPoseedorFK_DylArls")
   DylArls_DylHVS_ARLPropietarioFKToDylArls                                 DylArls?            @relation("DylHVS_ARLPropietarioFKToDylArls", fields: [ARLPropietarioFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_ARLPropietarioFK_DylArls")
-  DylCiudades_DylHVS_CiudadConductorFKToDylCiudades                        DylCiudades?        @relation("DylHVS_CiudadConductorFKToDylCiudades", fields: [CiudadConductorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadConductorFK_DylCiudades")
-  DylCiudades_DylHVS_CiudadPoseedorFKToDylCiudades                         DylCiudades?        @relation("DylHVS_CiudadPoseedorFKToDylCiudades", fields: [CiudadPoseedorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadPoseedorFK_DylCiudades")
-  DylCiudades_DylHVS_CiudadPropietarioFKToDylCiudades                      DylCiudades?        @relation("DylHVS_CiudadPropietarioFKToDylCiudades", fields: [CiudadPropietarioFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadPropietarioFK_DylCiudades")
-  DylCiudades_DylHVS_CiudadReferenciaFKToDylCiudades                       DylCiudades?        @relation("DylHVS_CiudadReferenciaFKToDylCiudades", fields: [CiudadReferenciaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadReferenciaFK_DylCiudades")
+  DylCiudades_DylHVS_CiudadConductorFKToDylCiudades                        Municipios?         @relation("DylHVS_CiudadConductorFKToDylCiudades", fields: [CiudadConductorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadConductorFK_DylCiudades")
+  DylCiudades_DylHVS_CiudadPoseedorFKToDylCiudades                         Municipios?         @relation("DylHVS_CiudadPoseedorFKToDylCiudades", fields: [CiudadPoseedorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadPoseedorFK_DylCiudades")
+  DylCiudades_DylHVS_CiudadPropietarioFKToDylCiudades                      Municipios?         @relation("DylHVS_CiudadPropietarioFKToDylCiudades", fields: [CiudadPropietarioFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadPropietarioFK_DylCiudades")
+  DylCiudades_DylHVS_CiudadReferenciaFKToDylCiudades                       Municipios?         @relation("DylHVS_CiudadReferenciaFKToDylCiudades", fields: [CiudadReferenciaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_CiudadReferenciaFK_DylCiudades")
   DylEpss_DylHVS_EPSConductorFKToDylEpss                                   DylEpss?            @relation("DylHVS_EPSConductorFKToDylEpss", fields: [EPSConductorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_EPSConductorFK_DylEpss")
   DylEpss_DylHVS_EPSPropietarioFKToDylEpss                                 DylEpss?            @relation("DylHVS_EPSPropietarioFKToDylEpss", fields: [EPSPropietarioFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_EPSPropietarioFK_DylEpss")
   DylEpss_DylHVS_EPSProseedorFKToDylEpss                                   DylEpss?            @relation("DylHVS_EPSProseedorFKToDylEpss", fields: [EPSProseedorFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DylHVS_EPSProseedorFK_DylEpss")
@@ -1368,8 +1398,6 @@ model DylProveedoresGPS {
   UsuarioModificacion String?   @db.UniqueIdentifier
   FechaCreacion       DateTime?
   FechaModificacion   DateTime?
-  Usuario             String?   @db.VarChar(200)
-  Contrasena          String?   @db.VarChar(100)
   DylHVS              DylHVS[]
 }
 
@@ -1384,4 +1412,43 @@ model DylTiposDocumentos {
   DylHVS_DylHVS_TipoDocumentoConductorFKToDylTiposDocumentos   DylHVS[]  @relation("DylHVS_TipoDocumentoConductorFKToDylTiposDocumentos")
   DylHVS_DylHVS_TipoDocumentoPoseedorFKToDylTiposDocumentos    DylHVS[]  @relation("DylHVS_TipoDocumentoPoseedorFKToDylTiposDocumentos")
   DylHVS_DylHVS_TipoDocumentoPropietarioFKToDylTiposDocumentos DylHVS[]  @relation("DylHVS_TipoDocumentoPropietarioFKToDylTiposDocumentos")
+}
+
+model CufeXMLAllowanceCharges {
+  Id                        String    @id(map: "PK__CufeXMLA__3214EC075D02F027") @default(dbgenerated("newid()"), map: "DF__CufeXMLAllow__Id__0D99FE17") @db.UniqueIdentifier
+  CufeXMLFK                 String?   @db.UniqueIdentifier
+  AllowanceChargeReasonCode String?   @db.VarChar(100)
+  AllowanceChargeReason     String?   @db.VarChar(250)
+  MultiplierFactorNumeric   Decimal?  @db.Decimal(19, 3)
+  Amount                    Decimal?  @db.Decimal(19, 3)
+  BaseAmount                Decimal?  @db.Decimal(19, 3)
+  CufesXML                  CufesXML? @relation(fields: [CufeXMLFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_CufeXMLAllowanceCharges_CufeXMLFK_CufesXML")
+}
+
+model DescuentosGlobales {
+  Id                  String         @id(map: "PK__Descuent__3214EC0724262D52") @default(dbgenerated("newid()"), map: "DF__DescuentosGl__Id__1352D76D") @db.UniqueIdentifier
+  ClienteFK           String?        @db.UniqueIdentifier
+  Nombre              String?        @db.VarChar(250)
+  MenorValor          Boolean?
+  CuentaFK            String?        @db.UniqueIdentifier
+  UsuarioCreacion     String?        @db.UniqueIdentifier
+  UsuarioModificacion String?        @db.UniqueIdentifier
+  FechaCreacion       DateTime?
+  FechaModificacion   DateTime?
+  Clientes            Clientes?      @relation(fields: [ClienteFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DescuentosGlobales_ClienteFK_Clientes")
+  PlandeCuentas       PlandeCuentas? @relation(fields: [CuentaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_DescuentosGlobales_CuentaFK_PlandeCuentas")
+}
+
+model RecargosGlobales {
+  Id                  String         @id(map: "PK__Recargos__3214EC07940F79D2") @default(dbgenerated("newid()"), map: "DF__RecargosGlob__Id__10766AC2") @db.UniqueIdentifier
+  Nombre              String?        @db.VarChar(100)
+  MayorValor          Boolean?
+  CuentaFK            String?        @db.UniqueIdentifier
+  UsuarioModificacion String?        @db.UniqueIdentifier
+  UsuarioCreacion     String?        @db.UniqueIdentifier
+  FechaCreacion       DateTime?
+  FechaModificacion   DateTime?
+  ClienteFK           String?        @db.UniqueIdentifier
+  Clientes            Clientes?      @relation(fields: [ClienteFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_RecargosGlobales_ClienteFK_Clientes")
+  PlandeCuentas       PlandeCuentas? @relation(fields: [CuentaFK], references: [Id], onDelete: NoAction, onUpdate: NoAction, map: "FK_RecargosGlobales_CuentaFK_PlandeCuentas")
 }

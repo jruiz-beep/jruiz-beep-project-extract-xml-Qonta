@@ -18,33 +18,7 @@ const mapXmlToJSON = (xml) => {
     return String(nota);
   });
   const notasUnidas = notasLimpias.join('\n');
-  
-  // Calcular ValorPropina de forma robusta: soporta cac:AllowanceCharge como
-  // objeto o array y selecciona el allowance que parece ser la propina
-  // (ChargeIndicator === true, o AllowanceChargeReason contiene 'Propina', o ReasonCode === '01').
-  let valorPropina = 0;
-  const allowanceRoot = json["Invoice"]["cac:AllowanceCharge"];
-  if (allowanceRoot) {
-    const allowances = Array.isArray(allowanceRoot) ? allowanceRoot : [allowanceRoot];
-    const tip = allowances.find((a) => {
-      const chargeIndicator = a["cbc:ChargeIndicator"];
-      // chargeIndicator puede venir como objeto, string o boolean
-      const indicatorBool = typeof chargeIndicator === "object"
-        ? Boolean(chargeIndicator["$t"] || chargeIndicator)
-        : Boolean(chargeIndicator);
-      const reason = a["cbc:AllowanceChargeReason"] || "";
-      const reasonCode = a["cbc:AllowanceChargeReasonCode"];
-      return (
-        indicatorBool === true ||
-        (typeof reason === "string" && reason.toLowerCase().includes("propina")) ||
-        reasonCode === "01"
-      );
-    });
-    if (tip && tip["cbc:Amount"]) {
-      valorPropina = tip["cbc:Amount"]["$t"] || tip["cbc:Amount"] || 0;
-    }
-  }
-  
+
   // Extraer TaxLevelCode de forma robusta: puede ser string, objeto con $t,
   // un array de nodos, o un objeto más complejo. Normalizamos a un string
   // tipo "O-13;O-15;O-23" en `taxLevelRaw`.
@@ -108,8 +82,34 @@ const mapXmlToJSON = (xml) => {
     FormaPago: json["Invoice"]["cac:PaymentMeans"]["cbc:ID"]?.["$t"] ? json["Invoice"]["cac:PaymentMeans"]["cbc:ID"]?.["$t"] : json["Invoice"]["cac:PaymentMeans"]["cbc:ID"],
     Notas: notasUnidas,
     Auxiliar: JSON.stringify(Proveedor),
-    ValorPropina: valorPropina,
   };
+
+  // Mapear AllowanceCharge si existe
+  const allowanceCharge = json["Invoice"]["cac:AllowanceCharge"];
+  if (allowanceCharge) {
+    const isArray = Array.isArray(allowanceCharge);
+    if(isArray){
+      invoice.AllowanceCharge = allowanceCharge.map((ac) => {
+        return {
+          ChargeIndicator: ac?.["cbc:ChargeIndicator"],
+          AllowanceChargeReasonCode: ac?.["cbc:AllowanceChargeReasonCode"],
+          AllowanceChargeReason: ac?.["cbc:AllowanceChargeReason"],
+          MultiplierFactorNumeric: ac?.["cbc:MultiplierFactorNumeric"],
+          Amount: ac?.["cbc:Amount"]?.["$t"] || ac?.["cbc:Amount"],
+          BaseAmount: ac?.["cbc:BaseAmount"]?.["$t"] || ac?.["cbc:BaseAmount"],
+        }
+      })
+    }else{
+      invoice.AllowanceCharge = {
+        ChargeIndicator: allowanceCharge?.["cbc:ChargeIndicator"],
+        AllowanceChargeReasonCode: allowanceCharge?.["cbc:AllowanceChargeReasonCode"],
+        AllowanceChargeReason: allowanceCharge?.["cbc:AllowanceChargeReason"],
+        MultiplierFactorNumeric: allowanceCharge?.["cbc:MultiplierFactorNumeric"],
+        Amount: allowanceCharge?.["cbc:Amount"]?.["$t"] || allowanceCharge?.["cbc:Amount"],
+        BaseAmount: allowanceCharge?.["cbc:BaseAmount"]?.["$t"] || allowanceCharge?.["cbc:BaseAmount"],
+      }
+    }
+  }
 
   const invoiceLines = json?.Invoice?.["cac:InvoiceLine"];
 

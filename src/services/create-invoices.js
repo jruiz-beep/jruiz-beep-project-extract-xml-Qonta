@@ -16,6 +16,7 @@ const validateInvoice = (invoice) => {
 
 const createInvoices = async (invoices) => {
   const invoiceData = [];
+  const AllowanceChargeGlobal = [];
   const lineData = [];
   const taxData = [];
   const allowanceChargeData = [];
@@ -54,8 +55,21 @@ const createInvoices = async (invoices) => {
         FormaPago: invoice.FormaPago || "N/A",
         Auxiliar: invoice.Auxiliar || "{}",
         Notas: invoice.Notas,
-        ValorPropina: parseFloat(invoice.ValorPropina) || 0,
       });
+
+      for (const allowanceCharge of invoice.AllowanceCharge || []) {
+        const allowanceChargeId = uuid();
+        AllowanceChargeGlobal.push({
+          Id: allowanceChargeId,
+          CufeXMLFK: invoiceId,
+          ChargeIndicator: allowanceCharge.ChargeIndicator || false,
+          AllowanceChargeReasonCode: allowanceCharge.AllowanceChargeReasonCode || "N/A",
+          AllowanceChargeReason: allowanceCharge.AllowanceChargeReason || "N/A",
+          MultiplierFactorNumeric: parseFloat(allowanceCharge.MultiplierFactorNumeric) || 0,
+          Amount: parseFloat(allowanceCharge.Amount) || 0,
+          BaseAmount: parseFloat(allowanceCharge.BaseAmount) || 0,
+        });
+      }
 
       for (const line of invoice.ItemsCufeXML || []) {
         const lineId = uuid();
@@ -138,14 +152,11 @@ const createInvoices = async (invoices) => {
     await connection.$transaction(async (prismaTx) => {
       // Inserciones masivas
       if (invoiceData.length > 0) await prismaTx.cufesXML.createMany({ data: invoiceData });
+      if (AllowanceChargeGlobal.length > 0) await prismaTx.CufeXMLAllowanceCharges.createMany({ data: AllowanceChargeGlobal });
       if (lineData.length > 0) await prismaTx.itemsCufeXML.createMany({ data: lineData });
       if (taxData.length > 0) await prismaTx.itemCufeXMLTaxes.createMany({ data: taxData });
-      if (allowanceChargeData.length > 0) {
-        await prismaTx.ItemCufeXMLAllowanceCharges.createMany({ data: allowanceChargeData });
-      }
-      if (taxSubtotalsData.length > 0) {
-        await prismaTx.itemCufeXMLTaxSubtotals.createMany({ data: taxSubtotalsData });
-      }
+      if (allowanceChargeData.length > 0) await prismaTx.ItemCufeXMLAllowanceCharges.createMany({ data: allowanceChargeData });
+      if (taxSubtotalsData.length > 0) await prismaTx.itemCufeXMLTaxSubtotals.createMany({ data: taxSubtotalsData });
     });
   } catch (error) {
     console.error("Error al procesar las facturas:", error);
