@@ -1,180 +1,43 @@
 [
   {
-    "NumeroFactura": "FEVE50360",
-    "Emisor": "CASA HERENCIA SAS",
-    "FechaEmision": "2025-11-04 14:19:51-05:00",
-    "FechaVencimiento": "2025-11-04",
-    "CUFE": "609919e70311753f71a7674def790d976512b78d001a6d18745978c828818e8ec2b4e0bedddf6284d797c961e73c24f9",
-    "ValorTotal": "181150.00",
-    "FormaPago": "1",
-    "Notas": "LOS CARGOS (PROPINA Y/O DOMICILIO) SON INGRESOS RECIBIDOS PARA TERCEROS.",
-    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"11001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"Cra 9 No 69a-26\",\"Telefono\":\"6159733\",\"Correo\":\"restaurantelaherencia@hotmail.com\",\"TipoDocumento\":\"31\"}",
-    "AllowanceCharge": [
-      {
-        "ChargeIndicator": "true",
-        "AllowanceChargeReasonCode": null,
-        "AllowanceChargeReason": "Servicio Voluntario",
-        "MultiplierFactorNumeric": "10.00",
-        "Amount": "15350.00",
-        "BaseAmount": "153500.00"
-      }
-    ],
+    "NumeroFactura": "65666",
+    "Emisor": "CONTABLER S.A.",
+    "FechaEmision": "2025-12-02 13:50:10-05:00",
+    "FechaVencimiento": "2025-12-07",
+    "CUFE": "3a24c9c3a843a7e4729f73d2af0146ee458a811cbe69d3258432b66268ddd9e865f2c512e86aa2adf0830d88ed6eee3a",
+    "ValorTotal": "2075360.00",
+    "FormaPago": "2",
+    "Notas": "",
+    "Auxiliar": "{\"CodigoPostal\":\"050012\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"TV 5 A 45 225\",\"Telefono\":\"2682211\",\"Correo\":\"facturacion@contabler.com.co\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
     "ItemsCufeXML": [
       {
         "ItemId": "1",
         "InvoicedQuantity": "1",
         "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "48055.56",
+        "LineExtensionAmount": "1744000",
         "LineExtensionAmountCurrency": "COP",
         "FreeOfChargeIndicator": false,
-        "Description": "Lengua",
-        "PriceAmount": "48055.56",
+        "Description": "Honorarios Asesoria Contable Dic/2025",
+        "PriceAmount": "1744000.00",
         "PriceAmountCurrency": "COP",
         "BaseQuantity": "1",
         "BaseQuantityUnitCode": "94",
         "ItemsCufeXMLTaxes": [
           {
-            "TaxAmount": "3844.44",
+            "TaxAmount": "331360",
             "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
+            "RoundingAmount": "0",
             "RoundingAmountCurrency": "COP",
             "ItemCufeXMLTaxSubtotals": [
               {
-                "TaxableAmount": "48055.56",
+                "TaxableAmount": "1744000.00",
                 "TaxableAmountCurrency": "COP",
-                "TaxAmount": "3844.44",
+                "TaxAmount": "331360",
                 "TaxAmountCurrency": "COP",
-                "NumPercent": "8.00",
-                "TaxSchemeID": "04",
-                "TaxSchemeName": "INC"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "ItemId": "2",
-        "InvoicedQuantity": "1",
-        "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "38425.93",
-        "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "Cazuela Paisa",
-        "PriceAmount": "38425.93",
-        "PriceAmountCurrency": "COP",
-        "BaseQuantity": "1",
-        "BaseQuantityUnitCode": "94",
-        "ItemsCufeXMLTaxes": [
-          {
-            "TaxAmount": "3074.07",
-            "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
-            "ItemCufeXMLTaxSubtotals": [
-              {
-                "TaxableAmount": "38425.93",
-                "TaxableAmountCurrency": "COP",
-                "TaxAmount": "3074.07",
-                "TaxAmountCurrency": "COP",
-                "NumPercent": "8.00",
-                "TaxSchemeID": "04",
-                "TaxSchemeName": "INC"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "ItemId": "3",
-        "InvoicedQuantity": "1",
-        "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "40648.15",
-        "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "Pollo curry",
-        "PriceAmount": "40648.15",
-        "PriceAmountCurrency": "COP",
-        "BaseQuantity": "1",
-        "BaseQuantityUnitCode": "94",
-        "ItemsCufeXMLTaxes": [
-          {
-            "TaxAmount": "3251.85",
-            "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
-            "ItemCufeXMLTaxSubtotals": [
-              {
-                "TaxableAmount": "40648.15",
-                "TaxableAmountCurrency": "COP",
-                "TaxAmount": "3251.85",
-                "TaxAmountCurrency": "COP",
-                "NumPercent": "8.00",
-                "TaxSchemeID": "04",
-                "TaxSchemeName": "INC"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "ItemId": "4",
-        "InvoicedQuantity": "1",
-        "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "8796.30",
-        "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "Limonada Yerbabu",
-        "PriceAmount": "8796.30",
-        "PriceAmountCurrency": "COP",
-        "BaseQuantity": "1",
-        "BaseQuantityUnitCode": "94",
-        "ItemsCufeXMLTaxes": [
-          {
-            "TaxAmount": "703.7",
-            "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
-            "ItemCufeXMLTaxSubtotals": [
-              {
-                "TaxableAmount": "8796.30",
-                "TaxableAmountCurrency": "COP",
-                "TaxAmount": "703.7",
-                "TaxAmountCurrency": "COP",
-                "NumPercent": "8.00",
-                "TaxSchemeID": "04",
-                "TaxSchemeName": "INC"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "ItemId": "5",
-        "InvoicedQuantity": "2",
-        "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "17592.59",
-        "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "Limonada Yerbabu",
-        "PriceAmount": "8796.30",
-        "PriceAmountCurrency": "COP",
-        "BaseQuantity": "2",
-        "BaseQuantityUnitCode": "94",
-        "ItemsCufeXMLTaxes": [
-          {
-            "TaxAmount": "1407.41",
-            "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
-            "ItemCufeXMLTaxSubtotals": [
-              {
-                "TaxableAmount": "17592.59",
-                "TaxableAmountCurrency": "COP",
-                "TaxAmount": "1407.41",
-                "TaxAmountCurrency": "COP",
-                "NumPercent": "8.00",
-                "TaxSchemeID": "04",
-                "TaxSchemeName": "INC"
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
               }
             ]
           }
