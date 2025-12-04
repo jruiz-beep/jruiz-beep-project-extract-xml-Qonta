@@ -1,1 +1,206 @@
-[]
+[
+  {
+    "NumeroFactura": "CC169",
+    "Emisor": "ANTLER LEGAL SAS",
+    "FechaEmision": "2025-12-03 16:49:00-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "0548afa093fbd899b3bcaf12ea5bafd483cefb1b137d685cf5cbb35db6734cb885313ac1a770f5bf6466e74bcb6216fd",
+    "ValorTotal": "1666000.00",
+    "FormaPago": "2",
+    "Notas": "Favor consignar en Cuenta de Ahorros Bancolombia 58200001965",
+    "Auxiliar": "{\"CodigoPostal\":\"000000\",\"Municipio\":\"11001\",\"ResponsabilidadesFiscales\":\"O-47\",\"ResponsabilidadesFiscalesCodigo\":[\"47\"],\"Direccion\":\"CR 8 85 31\",\"Telefono\":\"601|3107872829|\",\"Correo\":\"camila.cuberos@outlook.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "1",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "1400000",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Asesoría tributaria noviembre.",
+        "PriceAmount": "1400000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "266000",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "1400000.00",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "266000",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "EQ233052",
+    "Emisor": "TAVERA HURTADO Y CIA SAS",
+    "FechaEmision": "2025-12-03 23:08:46-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "219506aef6f9af9b10b22929288a75b0d24cb92c72b5f466320347cb873919ae1f40d8fb0ef453c94d5002181805bb0c",
+    "ValorTotal": "187857.000000",
+    "FormaPago": "1",
+    "Notas": "RESPONSABLE DE IVA",
+    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "11.331000",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "187857.000000",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "GASOLINA CORRIENTE 10% OXIGENADA",
+        "PriceAmount": "16579.000000",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "11.331000",
+        "BaseQuantityUnitCode": "94"
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FE14777",
+    "Emisor": "CARLOS ENRIQUE AGUIRRE PINZON",
+    "FechaEmision": "2025-12-03 00:00:00-05:00",
+    "CUFE": "32b386f18908352e2904f076f003fdc4452cbba48b88546e3c4e8afd7557eadde6064b417f29b622a6e852a85961ca78",
+    "ValorTotal": "76400.00",
+    "FormaPago": "1",
+    "Notas": "VENTA DE CONTADO,",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"17001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 3 5-07\",\"Telefono\":\"8601697\",\"Correo\":\"carlosferreagro@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "20",
+        "InvoiceQuantityUnitCode": "MTR",
+        "LineExtensionAmount": "45378.20",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "7708973694921 TELA NEGRA X M 841021 006340 8011822",
+        "PriceAmount": "2268.91",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "20",
+        "BaseQuantityUnitCode": "MTR",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "8621.86",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.00",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "45378.20",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "8621.86",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "4",
+        "InvoiceQuantityUnitCode": "MTR",
+        "LineExtensionAmount": "18823.52",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "1003061000308 PLASTICO NEGRO X METRO 1390306120 850313",
+        "PriceAmount": "4705.88",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "4",
+        "BaseQuantityUnitCode": "MTR",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "3576.47",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.00",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "18823.52",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "3576.47",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "EQ233050",
+    "Emisor": "TAVERA HURTADO Y CIA SAS",
+    "FechaEmision": "2025-12-03 23:04:11-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "d7cd1eda10508d352d9aa0d518099aa2868f66b3d39f67f87fad6ca423c02a52be752634e2ab59000409182257b7c89b",
+    "ValorTotal": "200000.000000",
+    "FormaPago": "1",
+    "Notas": "RESPONSABLE DE IVA",
+    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "9.457000",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "200000.000000",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "GASOLINA EXTRA 10% OXIGENADA",
+        "PriceAmount": "21150.000000",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "9.457000",
+        "BaseQuantityUnitCode": "94"
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "EQ233051",
+    "Emisor": "TAVERA HURTADO Y CIA SAS",
+    "FechaEmision": "2025-12-03 23:08:13-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "ee1c3a04c36e642db55605e20e7a18b1a7eee94bee1cf3e8826a78b7dfe0f9c13c62c44771852f00d86d9064d3298d84",
+    "ValorTotal": "296565.000000",
+    "FormaPago": "1",
+    "Notas": "RESPONSABLE DE IVA",
+    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "17.888000",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "296565.000000",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "GASOLINA CORRIENTE 10% OXIGENADA",
+        "PriceAmount": "16579.000000",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "17.888000",
+        "BaseQuantityUnitCode": "94"
+      }
+    ]
+  }
+]
