@@ -1,43 +1,461 @@
 [
   {
-    "NumeroFactura": "CC169",
-    "Emisor": "ANTLER LEGAL SAS",
-    "FechaEmision": "2025-12-03 16:49:00-05:00",
-    "FechaVencimiento": "2025-12-03",
-    "CUFE": "0548afa093fbd899b3bcaf12ea5bafd483cefb1b137d685cf5cbb35db6734cb885313ac1a770f5bf6466e74bcb6216fd",
-    "ValorTotal": "1666000.00",
-    "FormaPago": "2",
-    "Notas": "Favor consignar en Cuenta de Ahorros Bancolombia 58200001965",
-    "Auxiliar": "{\"CodigoPostal\":\"000000\",\"Municipio\":\"11001\",\"ResponsabilidadesFiscales\":\"O-47\",\"ResponsabilidadesFiscalesCodigo\":[\"47\"],\"Direccion\":\"CR 8 85 31\",\"Telefono\":\"601|3107872829|\",\"Correo\":\"camila.cuberos@outlook.com\",\"TipoDocumento\":\"31\"}",
+    "NumeroFactura": "SM263457",
+    "Emisor": "SERVICIOS MEDICOS SAN IGNACIO SAS",
+    "FechaEmision": "2025-12-03 00:00:00-05:00",
+    "CUFE": "02e2471ed18dda08e4b230e70da2701c35e93f7dd084f71dafcf0f67a84766250cfb478d48fbd312050ef163c284ccc3",
+    "ValorTotal": "116000.00",
+    "FormaPago": "1",
+    "Notas": "CONCEPTO: Pagos por PSE:  www.smsi.com.co – Botón PSE y enviar su soporte de pago a cartera@smsi.com.co\nfirmaDigital: MIIH8TCCBdmgAwIBAgIIEkFfMMlO0ewwDQYJKoZIhvcNAQELBQAwgbYxIzAhBgkqhkiG9w0BCQEW FGluZm9AYW5kZXNzY2QuY29tLmNvMSYwJAYDVQQDEx1DQSBBTkRFUyBTQ0QgUy5BLiBDbGFzZSBJ SSB2MzEwMC4GA1UECxMnRGl2aXNpb24gZGUgY2VydGlmaWNhY2lvbiBlbnRpZGFkIGZpbmFsMRIw EAYDVQQKEwlBbmRlcyBTQ0QxFDASBgNVBAcTC0JvZ290YSBELkMuMQswCQYDVQQGEwJDTzAeFw0y NDEwMjMwNTAwMDBaFw0yNTEwMjMwNDU5MDBaMIIBQTEWMBQGA1UECRMNQ1JBIDQ0ICA0OCA1MTEj MCEGCSqGSIb3DQEJARYUR0VSRU5DSUFAU01TSS5DT00uQ08xKjAoBgNVBAMTIVNFUlZJQ0lPUyBN RURJQ09TIFNBTiBJR05BQ0lPIFNBUzETMBEGA1UEBRMKODkwOTMzNzI2MTE2MDQGA1UEDBMtRW1p c29yIEZhY3R1cmEgRWxlY3Ryb25pY2EgLSBQZXJzb25hIEp1cmlkaWNhMTswOQYDVQQLEzJFbWl0 aWRvIHBvciBBbmRlcyBTQ0QgQWMgMjYgNjkgQyAwMyBUb3JyZSBCIE9mIDcwMTEXMBUGA1UEChMO QURNSU5JU1RSQUNJT04xEjAQBgNVBAcMCU1FREVMTMONTjESMBAGA1UECBMJQU5USU9RVUlBMQsw CQYDVQQGEwJDTzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALeT6Dww5rwp/xWbEruR JJORVYBOG+uZ2d2W0a325SdsfDCwKrQV13argg8HTTSQOaJ21L/jtuoS4yNcO8EvQ2DlCwqHjIqB F8jDh5a/4yGpWNJuWtDdpagZxjXsbqiWqjHsmilvE1yuAtCaa9WkJFA71O22ZnBxL8G+NJZWyt+0 foTYau/QsG0YcqsC6b1V5wi75UmiwrflsyxSx9ghPrkXvh7rqB6MAElikOKoxEt+jXi84pQdY4YF QsmJc8nIZ/6NGyvM7TvyKxvqGH01P6f7nR/5dxKbe3NtOW315zfG4nBY4VO8yT4Hgt6sAuCy9RzR Vry9PawmPEKXkT+jqvECAwEAAaOCAnMwggJvMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUQP4m aUcyJzLRrCHILuzPjdU1aOgwbwYIKwYBBQUHAQEEYzBhMDYGCCsGAQUFBzAChipodHRwOi8vY2Vy dHMuYW5kZXNzY2QuY29tLmNvL0NsYXNlSUl2My5jcnQwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LmFuZGVzc2NkLmNvbS5jbzAfBgNVHREEGDAWgRRHRVJFTkNJQUBTTVNJLkNPTS5DTzCCASEGA1Ud IASCARgwggEUMIHABgwrBgEEAYH0SAECBgkwga8wgawGCCsGAQUFBwICMIGfDIGcTGEgdXRpbGl6 YWNpw7NuIGRlIGVzdGUgY2VydGlmaWNhZG8gZXN0w6Egc3VqZXRhIGEgbGEgUEMgZGUgRmFjdHVy YWNpw7NuIEVsZWN0csOzbmljYSB5IERQQyBlc3RhYmxlY2lkYXMgcG9yIEFuZGVzIFNDRC4gQ8Oz ZGlnbyBkZSBBY3JlZGl0YWNpw7NuOiAxNi1FQ0QtMDA0ME8GDCsGAQQBgfRIAQEBCzA/MD0GCCsG AQUFBwIBFjFodHRwczovL3d3dy5hbmRlc3NjZC5jb20uY28vZG9jcy9EUENfQW5kZXNTQ0QucGRm MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDA5BgNVHR8EMjAwMC6gLKAqhihodHRwOi8v Y3JsLmFuZGVzc2NkLmNvbS5jby9DbGFzZUlJdjMuY3JsMB0GA1UdDgQWBBTxIqZTXnwJUv26ThXi qNwtY8IXAzAOBgNVHQ8BAf8EBAMCBeAwDQYJKoZIhvcNAQELBQADggIBADHMVmlQ16sI6OeZYMfj v2CxIECMt/vHGcOWh3Pbw8elybyAC/XohkGKyUsRLOYkAm4X6eALDCu4/RNAj1MEJwYhEfRENIck j3cH2kkQWGdcn5/H0DLtfw6bKY4vtZsqqvqvl6NrK6M3O3c0pku3z2tJ0ubnt3fuMa6Pb/QJBiVI Bdqxr4xLUuYmV5z2G5oTL0iAQs51k/RXean7JUr3iZC+2Q4f+mRHvTd3WCctSAJcT2uyWwGZn+tx O4vJFkogndrJCkQCL6UF8XQKd+apMZ8VHTxMOR1EDLExlB3HSUsEGUuv0vPNI9RssLTqiKNp6hph UXwPJQVQeyd3vTGy0wXQYcB/V1BeY1pr2qiJFlTBwy6F/T8MF2omMpwN/YO6QmW39bW4nURH71ey ZCwL+rzE8soPPrHZ9aYRnZTPzL9rT1uZmhu0AACzuEFCsm7wkc49NFKBFbX4PGQ214rqwjn5TKhF G9sHAqhUK/Mjo+rfr3Fzx5b6Q4Q+/UeYkLkUnZsvnNeYDnH6Z+gIY/WKGrB3uLwNBJJuv9elFXdb ojA6rFW6FzXVzcJub5434RlzzQqR/kkdqXFPDYzyz1s/df3955yvl7l78VZjzyQbzj3fhH47bYx4 +r9DZ8YAicmeoq25rOMrCRfUDQ2r9NCnJHQhVxGbvnhl4NufsmOLuK+I",
+    "Auxiliar": "{\"CodigoPostal\":\"000000\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 44 48 51\",\"Telefono\":\"2161144\",\"Correo\":\"facturacion@smsi.com.co\",\"TipoDocumento\":\"31\"}",
     "AllowanceCharge": [],
     "ItemsCufeXML": [
       {
         "ItemId": "1",
-        "InvoicedQuantity": "1",
+        "InvoicedQuantity": "2.00",
         "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "1400000",
+        "LineExtensionAmount": "18000.00",
         "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "Asesoría tributaria noviembre.",
-        "PriceAmount": "1400000.00",
+        "FreeOfChargeIndicator": true,
+        "Description": "COPROLÓGICO",
+        "PriceAmount": "9000.00",
         "PriceAmountCurrency": "COP",
-        "BaseQuantity": "1",
-        "BaseQuantityUnitCode": "94",
+        "BaseQuantity": "2.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "2.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "22000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "EXAMEN DIRECTO PARA HONGOS [KOH-UÑAS]",
+        "PriceAmount": "11000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "3",
+        "InvoicedQuantity": "2.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "22000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "FROTIS DE GARGANTA SIN CULTIVO Y/O KOH",
+        "PriceAmount": "11000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "4",
+        "InvoicedQuantity": "2.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "54000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "HISTORIA CLINICA PARA MANIPULACION DE ALIMENTOS",
+        "PriceAmount": "27000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.00",
+        "BaseQuantityUnitCode": "94"
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FELB120905",
+    "Emisor": "LA BODEGA DEL POBLADO S.A.S",
+    "FechaEmision": "2025-12-02 11:34:32-05:00",
+    "FechaVencimiento": "2025-12-02",
+    "CUFE": "1e63be9008f2abfd916ab2860d44240944810d7831582eaccef51a598e39b3c8f173c6f6a7ddf97e0668f7e5c28dc778",
+    "ValorTotal": "904257.00",
+    "FormaPago": "1",
+    "Notas": "Cotizacion COT00003040 :",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 38 CL 8 A 8\",\"Telefono\":\"6045955903\",\"Correo\":\"labodegadelpoblado@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "2.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "132971.43",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "TEQUILA GRAN CENTENARIO PLATA 700 ML",
+        "PriceAmount": "66485.7143",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "132971.43",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
         "ItemsCufeXMLTaxes": [
           {
-            "TaxAmount": "266000",
+            "TaxAmount": "6648.57",
             "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0",
-            "RoundingAmountCurrency": "COP",
             "ItemCufeXMLTaxSubtotals": [
               {
-                "TaxableAmount": "1400000.00",
+                "TaxableAmount": "132971.43",
                 "TaxableAmountCurrency": "COP",
-                "TaxAmount": "266000",
+                "TaxAmount": "6648.57",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "57380.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "57380.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "2.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "132668.57",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "TEQUILA GRAN CENTENARIO REPOSADO 700 ML",
+        "PriceAmount": "66334.2857",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "132668.57",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "6633.43",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "132668.57",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "6633.43",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "57698.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "57698.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "3",
+        "InvoicedQuantity": "1.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "138934.29",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "MEZCAL 400 CONEJOS 750 ML",
+        "PriceAmount": "138934.2857",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "138934.29",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "6946.71",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "138934.29",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "6946.71",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "52419.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "52419.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "4",
+        "InvoicedQuantity": "1.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "102116.19",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "MEZCAL OJO DE TIGRE 750 ML",
+        "PriceAmount": "102116.1905",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "102116.19",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "5105.81",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "102116.19",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "5105.81",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "42978.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "42978.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "5",
+        "InvoicedQuantity": "2.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "29055.24",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "AGUARDIENTE SIN AZUCAR 1/2",
+        "PriceAmount": "14527.6190",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "29055.24",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1452.76",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "29055.24",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1452.76",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "17092.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "17092.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "6",
+        "InvoicedQuantity": "2.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "29653.33",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "RON VIEJO  CALDAS 375 ML",
+        "PriceAmount": "14826.6667",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "2.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "29653.33",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1482.67",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "29653.33",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1482.67",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "19560.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "19560.00",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "7",
+        "InvoicedQuantity": "38.000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "41218.82",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "COSTEÑITA BOT RET",
+        "PriceAmount": "1084.7059",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "38.000",
+        "BaseQuantityUnitCode": "NIU",
+        "ItemsCufeXMLAllowanceCharge": [
+          {
+            "ItemId": "1",
+            "ChargeIndicator": true,
+            "AllowanceChargeReason": "Discount",
+            "MultiplierFactorNumeric": "0.00",
+            "Amount": "0.00",
+            "AmountCurrency": "COP",
+            "BaseAmount": "41218.82",
+            "BaseAmountCurrency": "COP"
+          }
+        ],
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "7831.58",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "41218.82",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "7831.58",
                 "TaxAmountCurrency": "COP",
                 "NumPercent": "19.00",
                 "TaxSchemeID": "01",
                 "TaxSchemeName": "IVA"
+              }
+            ]
+          },
+          {
+            "TaxAmount": "14409.60",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": 0,
+                "TaxAmount": "14409.60",
+                "TaxAmountCurrency": "COP",
+                "TaxSchemeID": "02",
+                "TaxSchemeName": "IC"
               }
             ]
           }
@@ -46,66 +464,39 @@
     ]
   },
   {
-    "NumeroFactura": "EQ233052",
-    "Emisor": "TAVERA HURTADO Y CIA SAS",
-    "FechaEmision": "2025-12-03 23:08:46-05:00",
+    "NumeroFactura": "INST724",
+    "Emisor": "FRESQUERIA MYN S.A.S.",
+    "TipoFactura": "01",
+    "FechaEmision": "2025-12-03 08:37:54-05:00",
     "FechaVencimiento": "2025-12-03",
-    "CUFE": "219506aef6f9af9b10b22929288a75b0d24cb92c72b5f466320347cb873919ae1f40d8fb0ef453c94d5002181805bb0c",
-    "ValorTotal": "187857.000000",
+    "CUFE": "20bf069784b8442c01ea1bd77986a788420c4d544a76c454d4479ae2a13f541bd771b7c9db4668587ad135b9045f8752",
+    "ValorTotal": "378539.99",
     "FormaPago": "1",
-    "Notas": "RESPONSABLE DE IVA",
-    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "Notas": "<p><br></p>",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"05360\",\"ResponsabilidadesFiscales\":\"O-23\",\"ResponsabilidadesFiscalesCodigo\":[\"23\"],\"Direccion\":\"CL 33 NO 41 66 BG 111\",\"Telefono\":\"[object Object]\",\"Correo\":\"contabilidad@fresqueria.com\",\"TipoDocumento\":\"31\"}",
     "AllowanceCharge": [],
     "ItemsCufeXML": [
       {
         "ItemId": "1",
-        "InvoicedQuantity": "11.331000",
+        "InvoicedQuantity": "1.000000",
         "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "187857.000000",
+        "LineExtensionAmount": "242016.80",
         "LineExtensionAmountCurrency": "COP",
         "FreeOfChargeIndicator": false,
-        "Description": "GASOLINA CORRIENTE 10% OXIGENADA",
-        "PriceAmount": "16579.000000",
+        "Description": "[PTCE23] BARRIL CERVEZA  ARTESANAL",
+        "PriceAmount": "242016.80",
         "PriceAmountCurrency": "COP",
-        "BaseQuantity": "11.331000",
-        "BaseQuantityUnitCode": "94"
-      }
-    ]
-  },
-  {
-    "NumeroFactura": "FE14777",
-    "Emisor": "CARLOS ENRIQUE AGUIRRE PINZON",
-    "FechaEmision": "2025-12-03 00:00:00-05:00",
-    "CUFE": "32b386f18908352e2904f076f003fdc4452cbba48b88546e3c4e8afd7557eadde6064b417f29b622a6e852a85961ca78",
-    "ValorTotal": "76400.00",
-    "FormaPago": "1",
-    "Notas": "VENTA DE CONTADO,",
-    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"17001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 3 5-07\",\"Telefono\":\"8601697\",\"Correo\":\"carlosferreagro@gmail.com\",\"TipoDocumento\":\"31\"}",
-    "AllowanceCharge": [],
-    "ItemsCufeXML": [
-      {
-        "ItemId": "1",
-        "InvoicedQuantity": "20",
-        "InvoiceQuantityUnitCode": "MTR",
-        "LineExtensionAmount": "45378.20",
-        "LineExtensionAmountCurrency": "COP",
-        "FreeOfChargeIndicator": false,
-        "Description": "7708973694921 TELA NEGRA X M 841021 006340 8011822",
-        "PriceAmount": "2268.91",
-        "PriceAmountCurrency": "COP",
-        "BaseQuantity": "20",
-        "BaseQuantityUnitCode": "MTR",
+        "BaseQuantity": "1.000000",
+        "BaseQuantityUnitCode": "94",
         "ItemsCufeXMLTaxes": [
           {
-            "TaxAmount": "8621.86",
+            "TaxAmount": "45983.19",
             "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
             "ItemCufeXMLTaxSubtotals": [
               {
-                "TaxableAmount": "45378.20",
+                "TaxableAmount": "242016.80",
                 "TaxableAmountCurrency": "COP",
-                "TaxAmount": "8621.86",
+                "TaxAmount": "45983.19",
                 "TaxAmountCurrency": "COP",
                 "NumPercent": "19.00",
                 "TaxSchemeID": "01",
@@ -117,27 +508,55 @@
       },
       {
         "ItemId": "2",
-        "InvoicedQuantity": "4",
-        "InvoiceQuantityUnitCode": "MTR",
-        "LineExtensionAmount": "18823.52",
+        "InvoicedQuantity": "8.000000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "66000.00",
         "LineExtensionAmountCurrency": "COP",
         "FreeOfChargeIndicator": false,
-        "Description": "1003061000308 PLASTICO NEGRO X METRO 1390306120 850313",
-        "PriceAmount": "4705.88",
+        "Description": "[PT72] LIMON ZUMO 1L",
+        "PriceAmount": "8250.00",
         "PriceAmountCurrency": "COP",
-        "BaseQuantity": "4",
-        "BaseQuantityUnitCode": "MTR",
+        "BaseQuantity": "8.000000",
+        "BaseQuantityUnitCode": "EA",
         "ItemsCufeXMLTaxes": [
           {
-            "TaxAmount": "3576.47",
+            "TaxAmount": "12540.00",
             "TaxAmountCurrency": "COP",
-            "RoundingAmount": "0.00",
-            "RoundingAmountCurrency": "COP",
             "ItemCufeXMLTaxSubtotals": [
               {
-                "TaxableAmount": "18823.52",
+                "TaxableAmount": "66000.00",
                 "TaxableAmountCurrency": "COP",
-                "TaxAmount": "3576.47",
+                "TaxAmount": "12540.00",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "3",
+        "InvoicedQuantity": "1.000000",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "10084.03",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "[Transporte] Transporte",
+        "PriceAmount": "10084.03",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.000000",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1915.97",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "10084.03",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1915.97",
                 "TaxAmountCurrency": "COP",
                 "NumPercent": "19.00",
                 "TaxSchemeID": "01",
@@ -150,56 +569,735 @@
     ]
   },
   {
-    "NumeroFactura": "EQ233050",
-    "Emisor": "TAVERA HURTADO Y CIA SAS",
-    "FechaEmision": "2025-12-03 23:04:11-05:00",
-    "FechaVencimiento": "2025-12-03",
-    "CUFE": "d7cd1eda10508d352d9aa0d518099aa2868f66b3d39f67f87fad6ca423c02a52be752634e2ab59000409182257b7c89b",
-    "ValorTotal": "200000.000000",
-    "FormaPago": "1",
-    "Notas": "RESPONSABLE DE IVA",
-    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "NumeroFactura": "FSC3005",
+    "Emisor": "AGROINDUSTRIAS LA SIERRA S.A.S.",
+    "FechaEmision": "2025-12-03 16:21:25-05:00",
+    "FechaVencimiento": "2025-12-11",
+    "CUFE": "2cd76547ff91ac33e48dd99bd5e94b5820b3c2a77a345eb6eaa4d02346de4bcd9c90e3e8bae4d6850eaa5ea3766b1bf4",
+    "ValorTotal": "48000.000000",
+    "FormaPago": "2",
+    "Notas": "<p>REM 5216</p>",
+    "Auxiliar": "{\"CodigoPostal\":\"000000\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 52   97 A   60\",\"Telefono\":\"0000000\",\"Correo\":\"4121-5-notificacionesdls@hotmail.com\",\"TipoDocumento\":\"31\"}",
     "AllowanceCharge": [],
     "ItemsCufeXML": [
       {
         "ItemId": "1",
-        "InvoicedQuantity": "9.457000",
-        "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "200000.000000",
+        "InvoicedQuantity": "8.000000",
+        "InvoiceQuantityUnitCode": "EA",
+        "LineExtensionAmount": "48000.000000",
         "LineExtensionAmountCurrency": "COP",
         "FreeOfChargeIndicator": false,
-        "Description": "GASOLINA EXTRA 10% OXIGENADA",
-        "PriceAmount": "21150.000000",
+        "Description": "HUESO",
+        "PriceAmount": "6000.000000",
         "PriceAmountCurrency": "COP",
-        "BaseQuantity": "9.457000",
+        "BaseQuantity": "8.000000",
+        "BaseQuantityUnitCode": "EA",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "0.000000",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.000000",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "48000.000000",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "0.000000",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "0.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FEL294",
+    "Emisor": "AUDIONICS CORP SAS",
+    "FechaEmision": "2025-12-03 16:48:23-05:00",
+    "FechaVencimiento": "2025-12-05",
+    "CUFE": "4713eee6338bb262b46acd87623c32c2818bbdba282c199dffb9b9fc8fede53b913311dd48eb79b4d866cbb6d0b2bcb4",
+    "ValorTotal": "1011500.00",
+    "FormaPago": "2",
+    "Notas": "RACK ADSP 4-1200/SUBWOOFER SV3",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"11001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 29 10 33\",\"Telefono\":\"undefined\",\"Correo\":\"onecaresas@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "850000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "SERVICIO ALQUILER SISTEMA RADIAL 2 PRO 3.5/",
+        "PriceAmount": "850000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "161500.00",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "850000.00",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "161500.00",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "PEPO1279",
+    "Emisor": "WG PAPELERIA SAS",
+    "FechaEmision": "2025-12-03 18:00:00-05:00",
+    "FechaVencimiento": "2025-12-04",
+    "CUFE": "57d0d41c9524a66d0c06e6ab18cf610d362f0abd68c07de578fc222b4aca1a74eb7d002950acfb27485e3bdc134dad6e",
+    "ValorTotal": "8800.00",
+    "FormaPago": "1",
+    "Notas": "",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"undefined\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"undefined\",\"Telefono\":\"[object Object]\",\"Correo\":\"pobladowg@hotmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "4",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "672.27",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": [
+          "FOTOCOPIA B/N",
+          "FOTOCOPIA B/N"
+        ],
+        "PriceAmount": "168.07",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "4",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "127.73",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.00",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "672.27",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "127.73",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "16",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "6722.69",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": [
+          "IMPRESION B/N",
+          "IMPRESION B/N"
+        ],
+        "PriceAmount": "420.17",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "16",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1277.31",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.00",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "6722.69",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1277.31",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FI821151435",
+    "Emisor": "ALMACENES ÉXITO S.A",
+    "FechaEmision": "2025-12-03 15:56:31-05:00",
+    "CUFE": "5dc409103d96603eafb593541a4b96bcc9289ef0539b77b69cf1338523efd0ce191d872c57305b1049723700a6129ea8",
+    "ValorTotal": "171446.00",
+    "FormaPago": "1",
+    "Notas": "3\nPnts transaccion   :214,00|Pnts x vencer      :2026-08-31  2.187,00|Pnts x vencer      :2026-08-31  2.187,00\n*IMP. IMPUESTO AL CONSUMO LICORES Y CIGARRILLOS\nTOTAL ARTICULOS:11\n{\"languageLocaleID\":\"Nota5\"}\n171.446,00\nFranja ----------------[FORMAS DE PAGO]------------------------|FORMAS DE PAGO:CONTADO||MEDIOS DE PAGO:TARJETA DEBITO,|TOTAL:171.446,00\n17.046,00\n{\"languageLocaleID\":\"Nota9\"}\n{\"languageLocaleID\":\"Nota10\"}\n{\"languageLocaleID\":\"Nota11\"}\nAlmacenes Exito S.A. NIT 890.900.608 - 9|AUTORRETENEDOR  RES.  8825  DE  16/NOV/2016  - RESPONSABLE DE IVA|- GRAN CONTRIBUYENTE - RETENEDOR IMPUESTO IVA|#NLinea de atencion al cliente: 018000428800#N\nRESOLUCION DIAN # 18764074706782|PREFIJO FI82 RANGO AUTORIZADO: FI82 1028592 AL FI82 2000000|VIG 18 MESES DEL 2024-07-09 AL 2026-01-09\nToshiba Global Commerce Solutions (Colombia) S.A.S|NIT 900545074-9|SuperMarket Application\n2025-12-03 15:56:31-05:00 0725 002 0210 0000002416|COMPRA Y RECOGE LLAMANOS 3054829046|NUTRX:20251203072500020210\nCODIGO BARRAS|0725-EJT5B\n{\"languageLocaleID\":\"Nota17\"}\n{\"languageLocaleID\":\"Nota18\"}\n{\"languageLocaleID\":\"Nota19\"}\n{\"languageLocaleID\":\"Nota20\"}",
+    "Auxiliar": "{\"CodigoPostal\":\"055422\",\"Municipio\":\"05266\",\"ResponsabilidadesFiscales\":\"O-13;O-15;O-23\",\"ResponsabilidadesFiscalesCodigo\":[\"13\",\"15\",\"23\"],\"Direccion\":\"CR 48 32 B SUR 139\",\"Telefono\":\"2660421\",\"Correo\":\"afelectronica@grupo-exito.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [
+      {
+        "ChargeIndicator": "true",
+        "AllowanceChargeReasonCode": "00",
+        "AllowanceChargeReason": "IMPUESTO AL CONSUMO LICORES Y CIGARRILLOS",
+        "MultiplierFactorNumeric": "100.00",
+        "Amount": "14418.00",
+        "BaseAmount": "14418.00"
+      }
+    ],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "43949.58",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Crema Coco Fructos",
+        "PriceAmount": "43949.58",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "8350.42",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "43949.58",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "8350.42",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "22753.33",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Vino Tinto Chile T",
+        "PriceAmount": "29962.33",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1137.67",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "22753.33",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1137.67",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "3",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "22753.33",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Vino Tinto Chile T",
+        "PriceAmount": "29962.33",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1137.67",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "22753.33",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1137.67",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "5.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "4",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "9159.66",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "VELON N.4",
+        "PriceAmount": "9159.66",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1740.34",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "9159.66",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1740.34",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "5",
+        "InvoicedQuantity": "1.24",
+        "InvoiceQuantityUnitCode": "KGM",
+        "LineExtensionAmount": "12946.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Lulo",
+        "PriceAmount": "10440.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.24",
+        "BaseQuantityUnitCode": "KGM"
+      },
+      {
+        "ItemId": "6",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "6554.62",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Velon N.4",
+        "PriceAmount": "6554.62",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1245.38",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "6554.62",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1245.38",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "7",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "6554.62",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Velon N.4",
+        "PriceAmount": "6554.62",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1245.38",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "6554.62",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1245.38",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "8",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "5378.15",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Vela farol oferta",
+        "PriceAmount": "5378.15",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1021.85",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "5378.15",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1021.85",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "9",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "5378.15",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Vela farol oferta",
+        "PriceAmount": "5378.15",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "1021.85",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "5378.15",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "1021.85",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "10",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "4100.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "Cebolla Junca C",
+        "PriceAmount": "4100.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "11",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "504.20",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "BOLSA PAPEL NAVIDA",
+        "PriceAmount": "504.20",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "95.80",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "504.20",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "95.80",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FE3453",
+    "Emisor": "MARFIL INVESTMENTS S.A.S.",
+    "FechaEmision": "2025-12-02 09:31:49-05:00",
+    "FechaVencimiento": "2025-12-02",
+    "CUFE": "8bf015feff23007aa9f5751b0dfc1bba0adc53372033ee6b8664d5af40c21287c93574c0cf97fdded350660ac99250d8",
+    "ValorTotal": "268700.00",
+    "FormaPago": "2",
+    "Notas": "{}",
+    "Auxiliar": "{\"CodigoPostal\":\"05001\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"O-47\",\"ResponsabilidadesFiscalesCodigo\":[\"47\"],\"Direccion\":\"CR 9 A 20 SUR 340, KM 12\",\"Telefono\":\"undefined\",\"Correo\":\"auxiliar4@pcasesores.co\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "9500.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "DOMICILIO",
+        "PriceAmount": "9500.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "EA",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "0.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "9500.00",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "0.00",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "0.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "4.05",
+        "InvoiceQuantityUnitCode": "GGR",
+        "LineExtensionAmount": "259200.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "CAMARON",
+        "PriceAmount": "64000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "4.05",
+        "BaseQuantityUnitCode": "EA",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "0.00",
+            "TaxAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "259200.00",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "0.00",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "0.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "FEEF40078",
+    "Emisor": "la estacion ferretera sas",
+    "FechaEmision": "2025-12-03 08:43:41-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "b7fbdcb3f58b899785b687c66a7f75d4cadd1332c4db39b5bf614ed2f4f9244275cf00f184f27b24b470a56a5637428f",
+    "ValorTotal": "15900.00",
+    "FormaPago": "1",
+    "Notas": "REM-136139",
+    "Auxiliar": "{\"CodigoPostal\":\"050021\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 43D 10 46\",\"Telefono\":\"|3112511|109\",\"Correo\":\"estacionferretera@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "1",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "13361.34",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "DIABLO ROJO 350 GR VESTOLIT",
+        "PriceAmount": "13361.3445",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1",
+        "BaseQuantityUnitCode": "94",
+        "ItemsCufeXMLTaxes": [
+          {
+            "TaxAmount": "2538.66",
+            "TaxAmountCurrency": "COP",
+            "RoundingAmount": "0.0054",
+            "RoundingAmountCurrency": "COP",
+            "ItemCufeXMLTaxSubtotals": [
+              {
+                "TaxableAmount": "13361.34",
+                "TaxableAmountCurrency": "COP",
+                "TaxAmount": "2538.66",
+                "TaxAmountCurrency": "COP",
+                "NumPercent": "19.00",
+                "TaxSchemeID": "01",
+                "TaxSchemeName": "IVA"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "IT07837892",
+    "Emisor": "POSTOBON S.A.",
+    "FechaEmision": "2025-12-03 02:10:53-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "c454c9b0a14f283c41ac72bfa7858c132a36e22979b5c0c854c1d84f5ea751ae2cdaf2e40d657a44a9076efdf4011b2b",
+    "ValorTotal": "50899.92",
+    "FormaPago": "1",
+    "Notas": "1.=SOMOS GRANDES CONTRIBUYENTES\\n AGENTES RETENEDORES DE IVA\\n Responsables de IVA\\nACTIVIDAD ECONOMICA PRINCIPAL 1104\\nSOMOS AUTORRETENEDORES DEL IMPUESTO DE RENTA SEGÚN RESOLUCION 3348 DEL 24 DE ABRIL DE 2015|RESOLUCION DIAN N 18764101798468 RANGO AUTORIZADO: IT07794500 - IT071000000 DESDE 2025-11-20 HASTA 2027-11-20\n3.=3511069|IT1301|ITR327|9000002562|POSTOBON ITAGUI||WORKFLOW SYSTEM|1174551380\n6.=Pago de Contado|CINCUENTA MIL OCHOCIENTOS NOVENTA Y NUEVE PESOS CON 92/100 CTVS.\n7.=|03/12/2025|890903939\n8.=3228867337|901.842.641.2\n12.=13.104||24.000|0.000\n13.=\n14.=\n15.=DIRECCIÓN PRINCIPAL POSTOBÓN: CL 52 47- 42 P.25. En la venta de cerveza POSTOBON S.A. actúa como mandatario. El distribuidor de los productos enajenados de conformidad con esta factura de venta manifiesta que el impuesto al consumo ha sido declarado y pag\n15.=ado en el departamento correspondiente al lugar de emisión de la factura; por lo tanto los traslados de producto que pudiera hacer el consumidor final a otro departamento no afectan la responsabilidad del distribuidor en cuanto al impuesto referido. El or\n15.=iginal de esta factura de venta una vez aceptada constituye título valor según lo dispuesto por Ley 1231 de 2008  Se hace constar que la firma de facturas por terceros diferentes del comprador implica que dicha persona está autorizada expresamente por ést\n15.=e para firmar y confesar la deuda y obligar al comprador En caso de mora en el pago de la presente factura de venta se cobrará la tasa máxima  de intereses autorizada por la ley. Autorizo expresamente a POSTOBON S.A. para consultar y/o reportar en cualqui\n15.=er tiempo en las centrales de riesgo y demás entidades que manejan datos sobre mis relaciones comerciales.\n16.=\nCTS1.=ALACRAN DE SOPETRAN\nCTS2.=50899.92||50899.92\n17.=8035|\nEl ejemplar que reciba la DIAN se utilizará sólo para fines de control, verificación y fiscalización\nNumFac: IT07837892 FecFac: 2025-12-03 HorFac: 02:10:53-05:00 NitFac: 890903939 DocAdq: 901842641 ValFac: 50899.92 ValIva: 0.00 ValOtroIm: 0.00 ValTolFac: 50899.92 CUFE:  c454c9b0a14f283c41ac72bfa7858c132a36e22979b5c0c854c1d84f5ea751ae2cdaf2e40d657a44a9076efdf4011b2b https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=c454c9b0a14f283c41ac72bfa7858c132a36e22979b5c0c854c1d84f5ea751ae2cdaf2e40d657a44a9076efdf4011b2b\nNumFac: IT07837892 FecFac: 2025-12-03 HorFac: 02:10:53-05:00 ValFac: 50899.92 CodImp1: 01 ValImp1: 0.00 CodImp2: 02 ValImp2: 0.00 CodImp3: 03 ValImp3: 0.00 ValTot: 50899.92 NitOFE: 890903939 NumAdq: 901842641 TipoAmbiente: 1 String: IT078378922025-12-0302:10:53-05:0050899.92010.00040.00030.0050899.928909039399018426411",
+    "Auxiliar": "{\"CodigoPostal\":\"undefined\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"O-13;O-15\",\"ResponsabilidadesFiscalesCodigo\":[\"13\",\"15\"],\"Direccion\":\"[object Object]\",\"Telefono\":\"0545765100\",\"Correo\":\"recepcionfe@postobon.com.co\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "24.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "50899.92",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": false,
+        "Description": "|BRETAÑA 300 ML VIDRIO NR X 24",
+        "PriceAmount": "2120.83",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "24",
         "BaseQuantityUnitCode": "94"
       }
     ]
   },
   {
-    "NumeroFactura": "EQ233051",
-    "Emisor": "TAVERA HURTADO Y CIA SAS",
-    "FechaEmision": "2025-12-03 23:08:13-05:00",
-    "FechaVencimiento": "2025-12-03",
-    "CUFE": "ee1c3a04c36e642db55605e20e7a18b1a7eee94bee1cf3e8826a78b7dfe0f9c13c62c44771852f00d86d9064d3298d84",
-    "ValorTotal": "296565.000000",
+    "NumeroFactura": "SM263234",
+    "Emisor": "SERVICIOS MEDICOS SAN IGNACIO SAS",
+    "FechaEmision": "2025-12-02 00:00:00-05:00",
+    "CUFE": "e0a61c597ccdab4ac0eaf3faa409b34bcf84a79f1513938068f51523c323c2c4bd28e3eac0eb4cb57102657b9604003d",
+    "ValorTotal": "58000.00",
     "FormaPago": "1",
-    "Notas": "RESPONSABLE DE IVA",
-    "Auxiliar": "{\"CodigoPostal\":\"110111\",\"Municipio\":\"25386\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"DIAGONAL 4 NO. 5- 150\",\"Telefono\":\"3108564322\",\"Correo\":\"edslamesa2@gmail.com\",\"TipoDocumento\":\"31\"}",
+    "Notas": "CONCEPTO: Pagos por PSE:  www.smsi.com.co – Botón PSE y enviar su soporte de pago a cartera@smsi.com.co\nfirmaDigital: MIIH8TCCBdmgAwIBAgIIEkFfMMlO0ewwDQYJKoZIhvcNAQELBQAwgbYxIzAhBgkqhkiG9w0BCQEW FGluZm9AYW5kZXNzY2QuY29tLmNvMSYwJAYDVQQDEx1DQSBBTkRFUyBTQ0QgUy5BLiBDbGFzZSBJ SSB2MzEwMC4GA1UECxMnRGl2aXNpb24gZGUgY2VydGlmaWNhY2lvbiBlbnRpZGFkIGZpbmFsMRIw EAYDVQQKEwlBbmRlcyBTQ0QxFDASBgNVBAcTC0JvZ290YSBELkMuMQswCQYDVQQGEwJDTzAeFw0y NDEwMjMwNTAwMDBaFw0yNTEwMjMwNDU5MDBaMIIBQTEWMBQGA1UECRMNQ1JBIDQ0ICA0OCA1MTEj MCEGCSqGSIb3DQEJARYUR0VSRU5DSUFAU01TSS5DT00uQ08xKjAoBgNVBAMTIVNFUlZJQ0lPUyBN RURJQ09TIFNBTiBJR05BQ0lPIFNBUzETMBEGA1UEBRMKODkwOTMzNzI2MTE2MDQGA1UEDBMtRW1p c29yIEZhY3R1cmEgRWxlY3Ryb25pY2EgLSBQZXJzb25hIEp1cmlkaWNhMTswOQYDVQQLEzJFbWl0 aWRvIHBvciBBbmRlcyBTQ0QgQWMgMjYgNjkgQyAwMyBUb3JyZSBCIE9mIDcwMTEXMBUGA1UEChMO QURNSU5JU1RSQUNJT04xEjAQBgNVBAcMCU1FREVMTMONTjESMBAGA1UECBMJQU5USU9RVUlBMQsw CQYDVQQGEwJDTzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALeT6Dww5rwp/xWbEruR JJORVYBOG+uZ2d2W0a325SdsfDCwKrQV13argg8HTTSQOaJ21L/jtuoS4yNcO8EvQ2DlCwqHjIqB F8jDh5a/4yGpWNJuWtDdpagZxjXsbqiWqjHsmilvE1yuAtCaa9WkJFA71O22ZnBxL8G+NJZWyt+0 foTYau/QsG0YcqsC6b1V5wi75UmiwrflsyxSx9ghPrkXvh7rqB6MAElikOKoxEt+jXi84pQdY4YF QsmJc8nIZ/6NGyvM7TvyKxvqGH01P6f7nR/5dxKbe3NtOW315zfG4nBY4VO8yT4Hgt6sAuCy9RzR Vry9PawmPEKXkT+jqvECAwEAAaOCAnMwggJvMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUQP4m aUcyJzLRrCHILuzPjdU1aOgwbwYIKwYBBQUHAQEEYzBhMDYGCCsGAQUFBzAChipodHRwOi8vY2Vy dHMuYW5kZXNzY2QuY29tLmNvL0NsYXNlSUl2My5jcnQwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw LmFuZGVzc2NkLmNvbS5jbzAfBgNVHREEGDAWgRRHRVJFTkNJQUBTTVNJLkNPTS5DTzCCASEGA1Ud IASCARgwggEUMIHABgwrBgEEAYH0SAECBgkwga8wgawGCCsGAQUFBwICMIGfDIGcTGEgdXRpbGl6 YWNpw7NuIGRlIGVzdGUgY2VydGlmaWNhZG8gZXN0w6Egc3VqZXRhIGEgbGEgUEMgZGUgRmFjdHVy YWNpw7NuIEVsZWN0csOzbmljYSB5IERQQyBlc3RhYmxlY2lkYXMgcG9yIEFuZGVzIFNDRC4gQ8Oz ZGlnbyBkZSBBY3JlZGl0YWNpw7NuOiAxNi1FQ0QtMDA0ME8GDCsGAQQBgfRIAQEBCzA/MD0GCCsG AQUFBwIBFjFodHRwczovL3d3dy5hbmRlc3NjZC5jb20uY28vZG9jcy9EUENfQW5kZXNTQ0QucGRm MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDA5BgNVHR8EMjAwMC6gLKAqhihodHRwOi8v Y3JsLmFuZGVzc2NkLmNvbS5jby9DbGFzZUlJdjMuY3JsMB0GA1UdDgQWBBTxIqZTXnwJUv26ThXi qNwtY8IXAzAOBgNVHQ8BAf8EBAMCBeAwDQYJKoZIhvcNAQELBQADggIBADHMVmlQ16sI6OeZYMfj v2CxIECMt/vHGcOWh3Pbw8elybyAC/XohkGKyUsRLOYkAm4X6eALDCu4/RNAj1MEJwYhEfRENIck j3cH2kkQWGdcn5/H0DLtfw6bKY4vtZsqqvqvl6NrK6M3O3c0pku3z2tJ0ubnt3fuMa6Pb/QJBiVI Bdqxr4xLUuYmV5z2G5oTL0iAQs51k/RXean7JUr3iZC+2Q4f+mRHvTd3WCctSAJcT2uyWwGZn+tx O4vJFkogndrJCkQCL6UF8XQKd+apMZ8VHTxMOR1EDLExlB3HSUsEGUuv0vPNI9RssLTqiKNp6hph UXwPJQVQeyd3vTGy0wXQYcB/V1BeY1pr2qiJFlTBwy6F/T8MF2omMpwN/YO6QmW39bW4nURH71ey ZCwL+rzE8soPPrHZ9aYRnZTPzL9rT1uZmhu0AACzuEFCsm7wkc49NFKBFbX4PGQ214rqwjn5TKhF G9sHAqhUK/Mjo+rfr3Fzx5b6Q4Q+/UeYkLkUnZsvnNeYDnH6Z+gIY/WKGrB3uLwNBJJuv9elFXdb ojA6rFW6FzXVzcJub5434RlzzQqR/kkdqXFPDYzyz1s/df3955yvl7l78VZjzyQbzj3fhH47bYx4 +r9DZ8YAicmeoq25rOMrCRfUDQ2r9NCnJHQhVxGbvnhl4NufsmOLuK+I",
+    "Auxiliar": "{\"CodigoPostal\":\"000000\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 44 48 51\",\"Telefono\":\"2161144\",\"Correo\":\"facturacion@smsi.com.co\",\"TipoDocumento\":\"31\"}",
     "AllowanceCharge": [],
     "ItemsCufeXML": [
       {
         "ItemId": "1",
-        "InvoicedQuantity": "17.888000",
+        "InvoicedQuantity": "1.00",
         "InvoiceQuantityUnitCode": "94",
-        "LineExtensionAmount": "296565.000000",
+        "LineExtensionAmount": "9000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "COPROLÓGICO",
+        "PriceAmount": "9000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "2",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "11000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "EXAMEN DIRECTO PARA HONGOS [KOH-UÑAS]",
+        "PriceAmount": "11000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "3",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "11000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "FROTIS DE GARGANTA SIN CULTIVO Y/O KOH",
+        "PriceAmount": "11000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94"
+      },
+      {
+        "ItemId": "4",
+        "InvoicedQuantity": "1.00",
+        "InvoiceQuantityUnitCode": "94",
+        "LineExtensionAmount": "27000.00",
+        "LineExtensionAmountCurrency": "COP",
+        "FreeOfChargeIndicator": true,
+        "Description": "HISTORIA CLINICA PARA MANIPULACION DE ALIMENTOS",
+        "PriceAmount": "27000.00",
+        "PriceAmountCurrency": "COP",
+        "BaseQuantity": "1.00",
+        "BaseQuantityUnitCode": "94"
+      }
+    ]
+  },
+  {
+    "NumeroFactura": "MED68570",
+    "Emisor": "PRODUCTOS ALIMENTICIOS LA JUANA SAS",
+    "FechaEmision": "2025-12-02 13:08:17-05:00",
+    "FechaVencimiento": "2025-12-03",
+    "CUFE": "eea0697f60436020c077d31bc95c59777f2ed6c454371da25f86f789016458877c3a4a52b5360a0e78f71089d0296bae",
+    "ValorTotal": "286000.00",
+    "FormaPago": "2",
+    "Notas": "",
+    "Auxiliar": "{\"CodigoPostal\":\"05001\",\"Municipio\":\"05001\",\"ResponsabilidadesFiscales\":\"R-99-PN\",\"ResponsabilidadesFiscalesCodigo\":null,\"Direccion\":\"CR 52 13 A SUR 57\",\"Telefono\":\"6045578672\",\"Correo\":\"administracion@lajuana.com\",\"TipoDocumento\":\"31\"}",
+    "AllowanceCharge": [],
+    "ItemsCufeXML": [
+      {
+        "ItemId": "1",
+        "InvoicedQuantity": "10.4",
+        "InvoiceQuantityUnitCode": "KGM",
+        "LineExtensionAmount": "286000",
         "LineExtensionAmountCurrency": "COP",
         "FreeOfChargeIndicator": false,
-        "Description": "GASOLINA CORRIENTE 10% OXIGENADA",
-        "PriceAmount": "16579.000000",
+        "Description": "TOCINO CARNUDO NT KL",
+        "PriceAmount": "27500.00",
         "PriceAmountCurrency": "COP",
-        "BaseQuantity": "17.888000",
-        "BaseQuantityUnitCode": "94"
+        "BaseQuantity": "10.4",
+        "BaseQuantityUnitCode": "KGM"
       }
     ]
   }
